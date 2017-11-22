@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const renderer = (component, props, ...children) => {
+export default (component, props, ...children) => {
   if (typeof component === 'function' && component.prototype instanceof React.Component === false) {
     return component(Object.assign({}, component.defaultProps, { ...props, children }));
   }
