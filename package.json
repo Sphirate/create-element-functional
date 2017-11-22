@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && babel ./src/renderer.js > ./index.js",
+    "build": "npm run clean && babel ./src/index.js > ./index.js",
     "clean": "rm -f ./index.js",
     "prepublish": "npm run build"
   },
