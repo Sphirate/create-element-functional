@@ -1,0 +1,31 @@
+{
+  "name": "create-element-functional",
+  "version": "0.1.0",
+  "description": "JSX `createElement` replacer to use functional React components as functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && babel ./src/renderer.js > ./index.js",
+    "clean": "rm -f ./index.js",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sphirate/create-element-functional.git"
+  },
+  "keywords": [
+    "React",
+    "JSX",
+    "performance",
+    "functional-component"
+  ],
+  "author": "Dmitry Rykov <sphirate@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sphirate/create-element-functional/issues"
+  },
+  "homepage": "https://github.com/Sphirate/create-element-functional#readme",
+  "files": [
+    "./index.js"
+  ]
+}
