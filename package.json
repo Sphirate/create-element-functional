@@ -1,6 +1,6 @@
 {
   "name": "create-element-functional",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JSX `createElement` replacer to use functional React components as functions",
   "main": "index.js",
   "scripts": {
