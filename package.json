@@ -19,7 +19,10 @@
     "performance",
     "functional-component"
   ],
-  "author": "Dmitry Rykov <sphirate@gmail.com>",
+  "author": {
+      "name": "Dmitry Rykov",
+      "email": "sphirate@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Sphirate/create-element-functional/issues"
@@ -28,6 +31,12 @@
   "files": [
     "./index.js"
   ],
+  "contributors": [
+    {
+        "name": "Dmitry Rykov",
+        "email": "sphirate@gmail.com"
+    }
+  ],
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
@@ -35,6 +44,6 @@
     "babel-preset-stage-2": "^6.24.1"
   },
   "peerDependencies": {
-    "react": ">=15.0.0 ^0.14.0"
+    "react": ">=15.0.0 || ^0.14.0"
   }
 }
