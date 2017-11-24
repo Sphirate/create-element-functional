@@ -7,9 +7,15 @@ This is replacer for standard `React.createElement` function. It will detect whe
 Rendering functional components as functions is good for performance optimisations in most cases. So if you use functional components in your app this package will speed it up. But if you don't have any this package is not for you.
 
 ## Usage
+Install this package
+```bash
+npm install --save-dev create-element-functional
+```
+
 Many build tools have ability to replace `React.createElement` by your own function, such as [`babel`](https://www.npmjs.com/package/babel) or even [`typescript`](https://www.npmjs.com/package/typescript). You just need to specify that replacer name with `renderer` function name from that package.
 
 Example (`babel`):
+You need to use [`babel-plugin-transform-react-jsx`](https://www.npmjs.com/package/babel-plugin-transform-react-jsx) to be able to replace standard `React.createElement` function call.
 ```jsx
 /* any/file.js */
 import React from 'react';
@@ -23,7 +29,7 @@ const renderedApp = <App />;
 {
     "plugins": [
         [
-            "transform-react-jsx", {
+            "babel-plugin-transform-react-jsx", {
                 "pragma": "functionalCreateElement"
             }
         ]
@@ -55,12 +61,12 @@ You can also use [`babel-plugin-jsx-pragmatic`](https://www.npmjs.com/package/ba
 Before you start use your funcional components as functions you have to change them a bit.
 
 ### `key` prop
-Ypu need to add `key` prop to every functional component you use and use that prop in high-level component inside that functional component.
+You need to add `key` prop to every functional component you use and use that prop in high-level component inside that functional component.
 
 ```jsx
 const before = ({ ...props }) => <div>{props.children}</div>;
 
-const after = ({ key = 0, ...props }) => <div key={key}>{props.children}</div>;
+const after = ({ key, ...props }) => <div key={key}>{props.children}</div>;
 ```
 
 You need to do that because now functional components are not components at all. They are just functions that return components or `JSX` elements and have no `key` prop.
@@ -70,7 +76,7 @@ Sometimes it's really neede to use functional components as components. To do th
 ```jsx
 import React from 'react';
 
-const FunctionalComponent = ({ key = 0, ...props }) => <div key={key}>{props.children}</div>;
+const FunctionalComponent = ({ key, ...props }) => <div key={key}>{props.children}</div>;
 
 class ClassicalComponent extends React.Component {
     render() {
