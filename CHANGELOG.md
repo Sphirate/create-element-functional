@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Added `contributors` to `package.json` manifest
 ### Fixed
 - Fixed typos in README
+- Fixed bug that default value of `children` prop was never used 
 
 
 ## [0.1.2] - 2017-11-23
