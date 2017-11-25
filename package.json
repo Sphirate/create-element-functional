@@ -1,6 +1,6 @@
 {
   "name": "create-element-functional",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "JSX `createElement` replacer to use functional React components as functions",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,8 @@
     "functional-component"
   ],
   "author": {
-      "name": "Dmitry Rykov",
-      "email": "sphirate@gmail.com"
+    "name": "Dmitry Rykov",
+    "email": "sphirate@gmail.com"
   },
   "license": "MIT",
   "bugs": {
@@ -33,8 +33,8 @@
   ],
   "contributors": [
     {
-        "name": "Dmitry Rykov",
-        "email": "sphirate@gmail.com"
+      "name": "Dmitry Rykov",
+      "email": "sphirate@gmail.com"
     }
   ],
   "devDependencies": {
