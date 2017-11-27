@@ -4,8 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+##[Unreleased]
 
-## [Unreleased]
+## [0.1.3] - 2017-11-25
 ### Added
 - Code of conduct
 - Changelog
@@ -25,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Stateless functional components with `contextTypes` static property will be rendered as "classic" component
 
 
-[Unreleased]: https://github.com/Sphirate/create-element-functional/compare/553d12bbcaef72de5fe559611cf79ebce6e37467...HEAD
+[Unreleased]: https://github.com/Sphirate/create-element-functional/compare/e0e6a06fb645033c414240484d2ab7ed27e16154...HEAD
+[0.1.3]: https://github.com/Sphirate/create-element-functional/compare/553d12bbcaef72de5fe559611cf79ebce6e37467...e0e6a06fb645033c414240484d2ab7ed27e16154
 [0.1.2]: https://github.com/Sphirate/create-element-functional/compare/b3d4b7e68644e7d2a332deb906b8d003ca94292e...553d12bbcaef72de5fe559611cf79ebce6e37467
 [0.1.1]: https://github.com/Sphirate/create-element-functional/compare/ff93a1971edb7308c0b5e03761cce7e16c872ae1...b3d4b7e68644e7d2a332deb906b8d003ca94292e
