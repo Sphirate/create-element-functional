@@ -2,3 +2,4 @@ node_modules
 /index.js
 create-element-functional-*.tgz
 npm-debug*
+*.orig
