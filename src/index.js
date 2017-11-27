@@ -1,14 +1,14 @@
-import React from 'react';
+import { createElement, Component } from 'react';
 
 const isPureSFComponent = (component) => (
     typeof component === 'function' &&
-    component.prototype instanceof React.Component === false &&
+    component.prototype instanceof Component === false &&
     !component.contextTypes
 );
 
 const formatChildren = (children) => children.length > 1 ? children : children[0];
 
-export default (component, props, ...children) => {
+export const createElementFactory = renderer => (component, props, ...children) => {
     if (isPureSFComponent(component)) {
         const combinedProps = { ...component.defaultProps, ...props };
         if (children.length > 0) {
@@ -17,5 +17,7 @@ export default (component, props, ...children) => {
         return component(combinedProps, {});
     }
 
-    return React.createElement(component, props, ...children);
+    return renderer(component, props, ...children);
 };
+
+export default createElementFactory(createElement);
